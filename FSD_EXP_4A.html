@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Simple Selectors */
+p { color: red; }
+#unique { color: blue; }
+.classname { font-weight: bold; }
+h1, h2 { text-decoration: underline; }
+* { font-family: Arial; }
+
+/* Combinator Selectors */
+div p { color: green; } /* descendant */
+div > span { color: purple; } /* child */
+h3 + p { color: brown; } /* adjacent sibling */
+h3 ~ p { background-color: yellow; } /* general sibling */
+
+/* Pseudo Class */
+a:hover { color: orange; }
+
+/* Pseudo Element */
+p::first-line { font-size: 18px; }
+
+/* Attribute Selector */
+input[type="text"] { border: 2px solid red; }
+</style>
+</head>
+
+<body>
+
+<h1>Example Heading</h1>
+<p>This is a paragraph.</p>
+
+<p id="unique">This is ID example.</p>
+
+<p class="classname">This is Class example.</p>
+
+<div>
+    <p>Descendant selector text</p>
+    <span>Child selector text</span>
+</div>
+
+<h3>Heading 3</h3>
+<p>Adjacent sibling paragraph</p>
+<p>General sibling paragraph</p>
+
+<a href="#">Hover over me</a>
+
+<p>Paragraph to show first line effect.</p>
+
+<input type="text" placeholder="Enter text">
+
+</body>
+</html>

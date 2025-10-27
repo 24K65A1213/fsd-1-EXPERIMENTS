@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Window Object Example</title></head>
+<body>
+
+<script>
+document.write("Window Width: " + window.innerWidth + "<br>");
+document.write("Window Height: " + window.innerHeight + "<br>");
+
+function openWin() {
+    window.open("https://www.google.com", "_blank", "width=400,height=300");
+}
+
+function closeWin() {
+    window.close();
+}
+</script>
+
+<button onclick="openWin()">Open New Window</button>
+<button onclick="closeWin()">Close This Window</button>
+
+</body>
+</html>

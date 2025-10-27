@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+
+<script>
+function validate(){
+    
+    // Name Validation
+    var name = document.getElementById("name").value;
+    var namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+    if(!namePattern.test(name)){
+        alert("Invalid Name! (Start with alphabet, Min length = 6)");
+        return false;
+    }
+
+    // Mobile Validation
+    var mobile = document.getElementById("mobile").value;
+    var mobilePattern = /^[0-9]{10}$/;
+    if(!mobilePattern.test(mobile)){
+        alert("Invalid Mobile Number! (Only 10 digits)");
+        return false;
+    }
+
+    // Email Validation
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if(!emailPattern.test(email)){
+        alert("Invalid Email Format!");
+        return false;
+    }
+
+    alert("Form Submitted Successfully ✅");
+    return true;
+}
+</script>
+
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+Name: <input type="text" id="name"><br><br>
+Mobile: <input type="text" id="mobile"><br><br>
+Email: <input type="text" id="email"><br><br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

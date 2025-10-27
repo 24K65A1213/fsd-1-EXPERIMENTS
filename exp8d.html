@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Object Data</title></head>
+<body>
+
+<script>
+var student = {name:"Rahul", age:20, course:"BCA"};
+
+document.write("<h3>Using for-in:</h3>");
+for(let key in student){
+    document.write(key + ": " + student[key] + "<br>");
+}
+
+document.write("<h3>Using forEach (on array):</h3>");
+var numbers = [10, 20, 30];
+numbers.forEach(function(n){
+    document.write(n + " ");
+});
+
+document.write("<h3><br><br>Using for-of (on array):</h3>");
+for(let x of numbers){
+    document.write(x + " ");
+}
+</script>
+
+</body>
+</html>

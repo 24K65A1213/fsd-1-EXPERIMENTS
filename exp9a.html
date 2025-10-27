@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><title>Functions Example</title></head>
+<body>
+
+<script>
+// i. Factorial
+function factorial(num){
+    let fact = 1;
+    for(let i = 1; i <= num; i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+// ii. Fibonacci
+function fibonacci(num){
+    let a = 0, b = 1, result = "";
+    for(let i = 1; i <= num; i++){
+        result += a + " ";
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+    return result;
+}
+
+// iii. Prime Numbers up to n
+function primeNumbers(num){
+    let res = "";
+    for(let i = 2; i <= num; i++){
+        let flag = true;
+        for(let j = 2; j <= Math.sqrt(i); j++){
+            if(i % j == 0){
+                flag = false; break;
+            }
+        }
+        if(flag) res += i + " ";
+    }
+    return res;
+}
+
+// iv. Palindrome Check
+function isPalindrome(num){
+    let str = num.toString();
+    let rev = str.split("").reverse().join("");
+    return (str === rev) ? "Palindrome" : "Not Palindrome";
+}
+
+// Testing Output:
+document.write("Factorial of 5: " + factorial(5) + "<br>");
+document.write("Fibonacci (5): " + fibonacci(5) + "<br>");
+document.write("Prime up to 20: " + primeNumbers(20) + "<br>");
+document.write("Check 121: " + isPalindrome(121) + "<br>");
+</script>
+
+</body>
+</html>

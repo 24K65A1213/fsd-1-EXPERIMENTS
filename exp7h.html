@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>User Defined Object Example</title></head>
+<body>
+
+<script>
+function Student(name, age, marks) {   // Constructor
+    this.name = name;
+    this.age = age;
+    this.marks = marks;
+
+    this.display = function() {        // Method
+        document.write("Name: " + this.name + "<br>");
+        document.write("Age: " + this.age + "<br>");
+        document.write("Marks: " + this.marks + "<br>");
+    };
+}
+
+var s1 = new Student("Rahul", 20, 88);
+s1.display(); // calling method
+</script>
+
+</body>
+</html>

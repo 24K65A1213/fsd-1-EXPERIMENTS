@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Input Methods</title>
+</head>
+<body>
+
+<script>
+// Using prompt
+var name = prompt("Enter your name:");
+document.write("You entered (Prompt): " + name + "<br>");
+
+// Using form input
+</script>
+
+<form>
+Enter Age: <input type="number" id="age"><br><br>
+<button type="button" onclick="showAge()">Display Age</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function showAge(){
+    var a = document.getElementById("age").value;
+    document.getElementById("result").innerHTML = "You entered (Form Input): " + a;
+}
+</script>
+
+</body>
+</html>
